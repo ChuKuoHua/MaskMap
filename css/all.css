@@ -180,6 +180,10 @@ header {
   -ms-transform: translateY(-1200px);
   transform: translateY(-1200px);
   z-index: 1000; }
+  .banner .imgBox {
+    position: relative;
+    margin: 0 auto;
+    width: 600px; }
   .banner img {
     max-width: 96vw;
     height: 800px;
@@ -187,8 +191,8 @@ header {
     display: block; }
   .banner .imgClose {
     position: absolute;
-    top: 58px;
-    left: 63.6%;
+    top: 10px;
+    right: 25px;
     z-index: 10; }
   .banner .fa-times {
     font-size: 24px;

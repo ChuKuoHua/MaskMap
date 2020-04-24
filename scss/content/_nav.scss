@@ -110,6 +110,11 @@ header{
     transition: all 1.5s;
     transform: translateY(-1200px);
     z-index: 1000;
+    .imgBox{
+        position: relative;
+        margin: 0 auto;
+        width: 600px;
+    }
     img{
         max-width: 96vw;
         height: 800px;
@@ -118,8 +123,8 @@ header{
     }
     .imgClose{
         position: absolute;
-        top: 58px;
-        left: 63.6%;
+        top: 10px;
+        right: 25px;
         z-index: 10;
     }
     .fa-times{
