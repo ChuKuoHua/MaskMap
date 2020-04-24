@@ -1,0 +1,8 @@
+$f-12 : 12px;  
+$f-14 : 14px;
+$f-18 : 18px;
+$f-20 : 20px;
+
+@mixin speed {
+    transition: all .5s;
+}

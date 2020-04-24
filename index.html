@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link> 
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/loaders.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="loader loader-box">
+        <div class="loader-inner">
+            <span>Loading</span>
+            <div class="ball-pulse">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img class="att_img" src="../MaskMap/imgs/attimg.jpg" alt="">
+        <a class="imgClose" href="#"><i class="fas fa-times"></i></a>
+    </div>
+    <div class="main">
+        <div class="nav_btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav">
+            <div class="nav_container">
+                <header>
+                    <h2>口罩即時地圖</h2>
+                    <span>資源來源：衛福部</span>
+                    <div class="todayDate"></div>
+                </header>
+                <div class="publishing">
+                    <div class="ann_navbar">
+                        <h1 class="week"></h1>
+                        <ul class="ann_menu">
+                            <li>
+                                <a class="online" href="https://emask.taiwan.gov.tw/msk/index.jsp" target="_blank">
+                                    線上訂購
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="question">
+                                    公告
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Ann"></div>
+                </div>
+                <div class="searchBox">
+                    <input class="search_Data" id="search_Data" type="text" value="" placeholder="縣市區域、地址、藥局">
+                    <a class="search" id="search" href="#"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="sel_container">
+                    <select id="county" class="county sel">
+                    </select>
+                    <select id="village" class="village sel">
+                    </select>
+                </div>
+            </div>
+            <article class="maskBox">
+                <div class="maskfilter filterClose" id="maskSearch">
+                    <input type="button" id="SearchAllMask" value="全部口罩" class="maskBtn">
+                    <input type="button" id="SearchAdultMask" value="成人口罩" class="maskBtn">
+                    <input type="button" id="SearchChildMask" value="小孩口罩" class="maskBtn">
+                </div>
+                <div class="maskfilter filterClose" id="maskfilter">
+                    <input type="button" id="allMask" value="全部口罩" class="maskBtn ">
+                    <input type="button" id="adultMask" value="成人口罩" class="maskBtn ">
+                    <input type="button" id="childMask" value="小孩口罩" class="maskBtn ">
+                </div>
+                <div class="divider"></div>
+                <h3 class="mask_title" id="mask_title"></h3>
+                <ul class="maskData"></ul>
+                <div class="top">
+                    <a href="#" class="fas fa-angle-double-up"></a>
+                </div>
+            </article>
+        </div>        
+    </div>
+    <div class="map" id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/loaders.css.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/postToday.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>

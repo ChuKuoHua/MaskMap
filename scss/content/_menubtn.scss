@@ -1,0 +1,21 @@
+.nav_btn{
+    transform: translateX(0px);
+    position: absolute;
+    right: -38px;
+    top: 35px;
+    display: block;
+    background: #303131bf;
+    padding: .6em;
+    cursor: pointer;
+    @include speed();
+    .fa-bars{
+        font-size: 20px;
+        color: #f7f7f7;
+    }
+    &.active{
+        transform: translateX(0px);
+        background: #000;
+        @include speed();
+        background: #dc6918;
+    }
+}

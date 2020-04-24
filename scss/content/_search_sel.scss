@@ -1,0 +1,43 @@
+.searchBox{
+    position: relative;
+    .search_Data{
+        margin-top: 1.6em;
+        padding-left: 10px;
+        width: 98%;
+        height: 38px;
+        border-radius: 20px;
+        border: 0;
+        box-shadow: 0 0 3px inset;
+    }
+    .search{
+        position: absolute;
+        top: 33px;
+        right: 10px;
+    }
+    .fa-search{
+        font-size: $f-18;
+        color: #1d1b1b;
+    }
+}
+.sel_container{
+    margin-top: 10px;
+    .county{
+        width: 45%;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+    .village{
+        width: 45%;
+    }
+    .sel{
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0 0 5px inset #c1bbbb;
+    }
+}
+.divider{
+    width: 96%;
+    height: 1px;
+    margin: 1em auto;
+    background: #8e898cba;
+}
