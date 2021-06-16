@@ -14,8 +14,21 @@
     }
     &.active{
         transform: translateX(0px);
-        background: #000;
         @include speed();
         background: #dc6918;
+    }
+}
+
+
+@include pad(){
+    .nav_btn{
+        position: initial;
+        &.active{
+            background: #5b6968
+        }
+    }
+    .fa-bars{
+        display: flex;
+        justify-content: flex-end;
     }
 }

@@ -1,0 +1,28 @@
+
+@include pad(){
+  .nav{
+    width: 100%;
+  }
+  .nav_container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sel_container .county{
+    margin-right: 2px;
+  }
+  .maskData{
+    li{
+      .adult, .child{
+        float: left;
+        width: auto;
+        padding: 5px 8px;
+        border-radius: 20px;
+        margin: 10px 5px 0 0px;
+        color: #fafcfc;
+      }
+    }
+  }
+  .time, .note{
+    display: none;
+  }
+}

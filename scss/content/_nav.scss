@@ -7,11 +7,26 @@
     -webkit-filter: blur(0px);
     filter: blur(0px);
 }
+.drawer{
+    transition-property: opacity;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 0;
+    background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5));
+    &.active{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
 .nav_container{
     padding: 0em 1.6em 1em 1.6em;
 }
 .nav{
-    display: block;
+    display: none;
     position: relative;
     width: 430px;
     background: #d7e1e4;;
@@ -21,7 +36,7 @@
 header{
     position: relative;
     padding: .6em 0;
-    h2{
+    h1{
         padding: 1em 0;
         font-size: $f-20*1.2;
     }
@@ -242,6 +257,9 @@ header{
 }
 .maskBox{
     position: relative;
+}
+.note {
+    display: block;
 }
 .top{
     position: fixed;

@@ -80,11 +80,27 @@ body {
   -webkit-filter: blur(0px);
   filter: blur(0px); }
 
+.drawer {
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 0;
+  background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5)); }
+  .drawer.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1; }
+
 .nav_container {
   padding: 0em 1.6em 1em 1.6em; }
 
 .nav {
-  display: block;
+  display: none;
   position: relative;
   width: 430px;
   background: #d7e1e4;
@@ -97,7 +113,7 @@ body {
 header {
   position: relative;
   padding: .6em 0; }
-  header h2 {
+  header h1 {
     padding: 1em 0;
     font-size: 24px; }
   header span, header .date {
@@ -293,6 +309,9 @@ header {
 .maskBox {
   position: relative; }
 
+.note {
+  display: block; }
+
 .top {
   position: fixed;
   bottom: 10px;
@@ -340,14 +359,29 @@ header {
     -webkit-transform: translateX(0px);
     -ms-transform: translateX(0px);
     transform: translateX(0px);
-    background: #000;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     background: #dc6918; }
 
+@media (max-width: 768px) {
+  .nav_btn {
+    position: initial; }
+    .nav_btn.active {
+      background: #5b6968; }
+  .fa-bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; } }
+
 .searchBox {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .searchBox .search_Data {
     margin-top: 1.6em;
     padding-left: 10px;
@@ -461,3 +495,21 @@ header {
 
 .marker-cluster span {
   line-height: 30px; }
+
+@media (max-width: 768px) {
+  .nav {
+    width: 100%; }
+  .nav_container {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .sel_container .county {
+    margin-right: 2px; }
+  .maskData li .adult, .maskData li .child {
+    float: left;
+    width: auto;
+    padding: 5px 8px;
+    border-radius: 20px;
+    margin: 10px 5px 0 0px;
+    color: #fafcfc; }
+  .time, .note {
+    display: none; } }
