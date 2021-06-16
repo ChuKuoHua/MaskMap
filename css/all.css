@@ -80,11 +80,27 @@ body {
   -webkit-filter: blur(0px);
   filter: blur(0px); }
 
+.drawer {
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 0;
+  background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5)); }
+  .drawer.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1; }
+
 .nav_container {
   padding: 0em 1.6em 1em 1.6em; }
 
 .nav {
-  display: block;
+  display: none;
   position: relative;
   width: 430px;
   background: #d7e1e4;
@@ -97,7 +113,7 @@ body {
 header {
   position: relative;
   padding: .6em 0; }
-  header h2 {
+  header h1 {
     padding: 1em 0;
     font-size: 24px; }
   header span, header .date {
@@ -120,7 +136,7 @@ header {
   background: #ffffff;
   -webkit-box-shadow: 0 0 5px inset #292323;
   box-shadow: 0 0 5px inset #292323; }
-  .publishing h1 {
+  .publishing h2 {
     float: left;
     font-weight: bold;
     padding-top: 10px;
@@ -180,6 +196,10 @@ header {
   -ms-transform: translateY(-1200px);
   transform: translateY(-1200px);
   z-index: 1000; }
+  .banner .imgBox {
+    position: relative;
+    margin: 0 auto;
+    width: 600px; }
   .banner img {
     max-width: 96vw;
     height: 800px;
@@ -187,8 +207,8 @@ header {
     display: block; }
   .banner .imgClose {
     position: absolute;
-    top: 58px;
-    left: 63.6%;
+    top: 10px;
+    right: 25px;
     z-index: 10; }
   .banner .fa-times {
     font-size: 24px;
@@ -289,6 +309,9 @@ header {
 .maskBox {
   position: relative; }
 
+.note {
+  display: block; }
+
 .top {
   position: fixed;
   bottom: 10px;
@@ -329,6 +352,8 @@ header {
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s; }
+  .nav_btn h1 {
+    display: none; }
   .nav_btn .fa-bars {
     font-size: 20px;
     color: #f7f7f7; }
@@ -336,14 +361,42 @@ header {
     -webkit-transform: translateX(0px);
     -ms-transform: translateX(0px);
     transform: translateX(0px);
-    background: #000;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     background: #dc6918; }
 
+@media (max-width: 768px) {
+  .nav_btn {
+    position: initial; }
+    .nav_btn.active {
+      background: #5b6968;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: #ffff; }
+      .nav_btn.active h1 {
+        display: block;
+        font-size: 18px; }
+  .fa-bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; } }
+
 .searchBox {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .searchBox .search_Data {
     margin-top: 1.6em;
     padding-left: 10px;
@@ -457,3 +510,33 @@ header {
 
 .marker-cluster span {
   line-height: 30px; }
+
+@media (max-width: 768px) {
+  header h1 {
+    display: none; }
+  header span, header .date {
+    position: initial; }
+  .nav {
+    width: 100%; }
+  .nav_container {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .sel_container .county {
+    margin-right: 2px; }
+  .maskData li .adult, .maskData li .child {
+    float: left;
+    width: auto;
+    padding: 5px 8px;
+    border-radius: 20px;
+    margin: 10px 5px 0 0px;
+    color: #fafcfc; }
+  .publishing h2 {
+    display: block; }
+  .ann_menu li {
+    margin-top: 16px; }
+  .ann_menu .question {
+    display: none; }
+  .ann_menu .online, .ann_menu .ann_menu .question {
+    padding: 0; }
+  .time, .note {
+    display: none; } }

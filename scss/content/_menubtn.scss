@@ -8,14 +8,38 @@
     padding: .6em;
     cursor: pointer;
     @include speed();
+    h1{
+        display: none;
+    }
     .fa-bars{
         font-size: 20px;
         color: #f7f7f7;
     }
     &.active{
         transform: translateX(0px);
-        background: #000;
         @include speed();
         background: #dc6918;
+    }
+}
+
+
+@include pad(){
+    .nav_btn{
+        position: initial;
+        &.active{
+            background: #5b6968;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffff;
+            h1{
+                display: block;
+                font-size: 18px;
+            }
+        }
+    }
+    .fa-bars{
+        display: flex;
+        justify-content: flex-end;
     }
 }

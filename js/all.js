@@ -69,13 +69,13 @@ function CurrentlyPosition(position) {
  * -----
  */
 const County = document.getElementById('county'),
-      Village = document.getElementById('village'),
-      load = document.querySelector('.loader'),
-      maskTitle = document.getElementById('mask_title'),
-      maskData = document.querySelector('.maskData'),
-      maskfilter = document.getElementById('maskfilter'),
-      maskSearch = document.getElementById('maskSearch'),
-      main = document.querySelector('.main');
+    Village = document.getElementById('village'),
+    load = document.querySelector('.loader'),
+    maskTitle = document.getElementById('mask_title'),
+    maskData = document.querySelector('.maskData'),
+    maskfilter = document.getElementById('maskfilter'),
+    maskSearch = document.getElementById('maskSearch'),
+    main = document.querySelector('.main');
 
 /** 透過AJAX取得城市資料 */
 let CountyData = '';
@@ -323,7 +323,7 @@ function searchData(){
                 <span class="inf">${phone}</span>
             </p>
             <hr>
-            <p>
+            <p class="note">
                 <i class="fas fa-scroll"></i>
                 <span class="inf">${note}<span>
             </p>
@@ -464,7 +464,7 @@ function searchData(){
                         <span class="inf">${phone}</span>
                     </p>
                     <hr>
-                    <p>
+                    <p class="note">
                         <i class="fas fa-scroll"></i>
                         <span class="inf">${note}<span>
                     </p>
@@ -626,7 +626,7 @@ function updateMaskData(cv_keywords){
                 <span class="inf">${phone}</span>
             </p>
             <hr>
-            <p>
+            <p class="note">
                 <i class="fas fa-scroll"></i>
                 <span class="inf">${note}<span>
             </p>
@@ -766,7 +766,7 @@ function updateMaskData(cv_keywords){
                         <span class="inf">${phone}</span>
                     </p>
                     <hr>
-                    <p>
+                    <p class="note">
                         <i class="fas fa-scroll"></i>
                         <span class="inf">${note}<span>
                     </p>

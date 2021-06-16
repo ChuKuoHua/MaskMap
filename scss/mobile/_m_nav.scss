@@ -1,0 +1,50 @@
+
+@include pad(){
+  header {
+    h1{
+      display: none;
+    }
+    span, .date{
+      position: initial;
+    }
+  }
+  .nav{
+    width: 100%;
+  }
+  .nav_container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sel_container .county{
+    margin-right: 2px;
+  }
+  .maskData{
+    li{
+      .adult, .child{
+        float: left;
+        width: auto;
+        padding: 5px 8px;
+        border-radius: 20px;
+        margin: 10px 5px 0 0px;
+        color: #fafcfc;
+      }
+    }
+  }
+  .publishing h2{
+    display: block;
+  }
+  .ann_menu{
+    li{
+      margin-top: 16px;
+    }
+    .question{
+      display: none;
+    }
+    .online, .ann_menu .question{
+      padding: 0;
+    }
+  }
+  .time, .note{
+    display: none;
+  }
+}

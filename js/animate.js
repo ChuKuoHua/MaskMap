@@ -3,8 +3,14 @@ $(document).ready(function(){
         e.preventDefault();
         $('.nav').toggle();
         $('.nav_btn').toggleClass("active");
-    });        
-
+        $('.drawer').toggleClass('active')
+    });      
+    $( '.drawer').on('click',function(e){
+        e.preventDefault();
+        $('.nav').hide();
+        $('.nav_btn').removeClass("active");
+        $('.drawer').removeClass('active');
+    });  
     $('.question').on('click',function(e){
         e.preventDefault();
         $('.banner').css('transform','translateY(0)');
@@ -21,12 +27,12 @@ $(document).ready(function(){
     });
     $('.maskData').scroll(function(){
         var topscroll=$(this).scrollTop();
-        console.log(topscroll);
+        // console.log(topscroll);
         if(topscroll > 50){
             $('.top').slideDown(1000); 
                     
         }else{
             $('.top').slideUp(500);        
         };
-    })
+    });
 });
