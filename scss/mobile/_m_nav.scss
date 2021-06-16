@@ -1,5 +1,13 @@
 
 @include pad(){
+  header {
+    h1{
+      display: none;
+    }
+    span, .date{
+      position: initial;
+    }
+  }
   .nav{
     width: 100%;
   }
@@ -20,6 +28,20 @@
         margin: 10px 5px 0 0px;
         color: #fafcfc;
       }
+    }
+  }
+  .publishing h2{
+    display: block;
+  }
+  .ann_menu{
+    li{
+      margin-top: 16px;
+    }
+    .question{
+      display: none;
+    }
+    .online, .ann_menu .question{
+      padding: 0;
     }
   }
   .time, .note{

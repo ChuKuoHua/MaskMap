@@ -8,6 +8,9 @@
     padding: .6em;
     cursor: pointer;
     @include speed();
+    h1{
+        display: none;
+    }
     .fa-bars{
         font-size: 20px;
         color: #f7f7f7;
@@ -24,7 +27,15 @@
     .nav_btn{
         position: initial;
         &.active{
-            background: #5b6968
+            background: #5b6968;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffff;
+            h1{
+                display: block;
+                font-size: 18px;
+            }
         }
     }
     .fa-bars{
